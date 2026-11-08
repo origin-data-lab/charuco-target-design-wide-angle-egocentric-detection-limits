@@ -1,0 +1,66 @@
+{
+  "note": 12,
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "corner yield vs marker px",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/a4_completeness_vs_marker_px.csv",
+        "analysis/a4_detection_limits.py"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "distance limits A4 / far",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/a4_distance_timeline.csv"
+      ],
+      "note": "distance from stereo where detected; tape plan otherwise"
+    },
+    {
+      "id": "C3",
+      "claim": "session A yield 0–20% at 1–1.5 m vs 79% at 0.25–0.5 m",
+      "status": "Verified (automated) / distances Estimated from video inspection",
+      "evidence": [
+        "assets/tables/a4_session_yield.csv"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "print scale 97.2% / 97.1%",
+      "status": "Human measurement (steel rule, single reading)",
+      "evidence": [
+        "operator message 2026-10-26 17:52 KST"
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "sizing rule 30 px × distance / f",
+      "status": "Interpretation (derived from C1 + pinhole relation)",
+      "evidence": [
+        "assets/tables/a4_marker_px_model.csv"
+      ]
+    },
+    {
+      "id": "C6",
+      "claim": "2× upscaling did not recover 1–1.5 m frames",
+      "status": "Verified (spot check, 6 frames)",
+      "evidence": [
+        "session log 2026-10-26"
+      ]
+    }
+  ],
+  "inputs": {
+    "environment": {
+      "python": "3.13.17",
+      "opencv": "4.10.0 (opencv-contrib-python-headless)",
+      "numpy": "2.2.6",
+      "pandas": "3.0.5",
+      "matplotlib": "3.11.2",
+      "os": "Linux x86_64 (CPU only)",
+      "analysis_date": "2026-10-26"
+    }
+  }
+}
